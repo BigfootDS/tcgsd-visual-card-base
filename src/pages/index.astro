@@ -1,0 +1,25 @@
+---
+// Astro will bundle and optimize this CSS for you automatically
+// This also works for preprocessor files like .scss, .styl, etc.
+import '../styles/style.css';
+
+// Import React components in the frontmatter so Astro knows how to parse and load them.
+import ExampleReactComponent from "../components/ExampleReactComponent";
+
+console.log("Astro component running!");
+---
+
+<div class="ptcg-sv">
+	<ExampleReactComponent client:load />
+	<section>
+		<h1>
+			tcgsd:name
+		</h1>
+		<h2>
+			tcgsd:types
+		</h2>
+		<h2>
+			tcgsd:resource1
+		</h2>
+	</section>
+</div>

@@ -1,0 +1,1 @@
+Put your favicons, static image assets, and so on, all in the public folder.
