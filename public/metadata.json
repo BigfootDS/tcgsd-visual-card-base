@@ -1,28 +1,28 @@
 {
-	"internalName": "example-template",
-	"version": "1.0.0",
-	"website": "https://tcgsetdesigner.com/",
-	"repository":"https://github.com/BigfootDS/tcgsd-visual-card-base",
-	"author": {
-		"name":"Alex Stormwood",
-		"url": "https://alexstormwood.com/",
-		"email":"alex@bigfootds.com"
-	},
-	"name": [
-		{
-			"language": "en",
-			"content":"TCGSD Example Visual Card Template"
-		},
-		{
-			"language": "jp",
-			"content":"TCGSD ビジュアルカードテンプレートの例"
-		},
-		{
-			"language": "fr",
-			"content":"Exemple de Modèle de Carte Visuelle TCGSD"
-		}
-	],
-	"game":{
-		"internalName":"ptcg"
-	}
+  "internalName": "example-template",
+  "version": "1.0.1",
+  "website": "https://tcgsetdesigner.com/",
+  "repository": "https://github.com/BigfootDS/tcgsd-visual-card-base",
+  "author": {
+    "name": "Alex Stormwood",
+    "url": "https://alexstormwood.com/",
+    "email": "alex@bigfootds.com"
+  },
+  "name": [
+    {
+      "language": "en",
+      "content": "TCGSD Example Visual Card Template"
+    },
+    {
+      "language": "jp",
+      "content": "TCGSD ビジュアルカードテンプレートの例"
+    },
+    {
+      "language": "fr",
+      "content": "Exemple de Modèle de Carte Visuelle TCGSD"
+    }
+  ],
+  "game": {
+    "internalName": "ptcg"
+  }
 }
