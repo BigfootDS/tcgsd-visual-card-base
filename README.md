@@ -6,7 +6,7 @@ Example repo for how to layout the visuals of a trading card in the TCG Set Desi
 In the TCGSD system, a Visual Card Template must be a HTML file that lets the TCGSD interpolate data into its contents. For example, HTML like this:
 
 ```html
-<div class="ptcg-sv">
+<div class="example-vct">
 	<section>
 		<h1>
 			tcgsd:name
