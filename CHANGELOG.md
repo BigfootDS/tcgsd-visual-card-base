@@ -1,3 +1,13 @@
+## [1.1.2](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.1...1.1.2) (2025-05-24)
+
+
+### Bug Fixes
+
+* correct metadata data ([68797ad](https://github.com/BigfootDS/tcgsd-visual-card-base/commit/68797ade90a0410e303bc072fe89303537803440))
+* remove base from astro config, didn't look used by the api ([b75dcc9](https://github.com/BigfootDS/tcgsd-visual-card-base/commit/b75dcc9a546d4bee870755d86cd12bc2057cee39))
+
+
+
 ## [1.1.1](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.0...1.1.1) (2025-05-24)
 
 
