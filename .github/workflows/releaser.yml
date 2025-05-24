@@ -38,6 +38,7 @@ jobs:
         git-user-email: "contact@bigfootds.com"
         git-user-name: "BigfootDS"
         version-file: './package.json,./public/metadata.json'
+        skip-on-empty: false
 
     - name: Set up dependencies
       run: |
