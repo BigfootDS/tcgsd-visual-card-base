@@ -37,6 +37,7 @@ jobs:
         output-file: 'CHANGELOG.md'
         git-user-email: "contact@bigfootds.com"
         git-user-name: "BigfootDS"
+        version-file: './package.json,./public/metadata.json'
 
     - name: Set up dependencies
       run: |
@@ -52,7 +53,7 @@ jobs:
 
     - name: ZIP the build up to release it
       run: |
-        zip -r example-template.zip ./dist/
+        cd ./dist/ && zip -r ../example-template.zip ./* && cd ..
 
     - name: Create repo release
       if: ${{ steps.bumper-step.outputs.skipped == 'false' }}
