@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.2...1.1.3) (2025-05-24)
+
+
+### Bug Fixes
+
+* whitelabel css classname ([3152f73](https://github.com/BigfootDS/tcgsd-visual-card-base/commit/3152f73583010f7a2141eecfeadecabc2ada722d))
+
+
+
 ## [1.1.2](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.1...1.1.2) (2025-05-24)
 
 
