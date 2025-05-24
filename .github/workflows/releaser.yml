@@ -1,0 +1,66 @@
+name: Make New Release
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'package.json'
+      - 'CHANGELOG.md'
+#   pull_request:
+#     types: 
+#       - closed
+#     branches:
+#       - 'main'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  
+  releaser:
+    runs-on: ubuntu-latest
+
+    outputs:
+      new-tag: ${{ steps.bumper-step.outputs.tag }}
+
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Bump version and push tag
+      id: bumper-step
+      uses: TriPSs/conventional-changelog-action@v6.0.0
+      with:
+        git-message: 'chore(release): {version}'
+        preset: 'angular'
+        tag-prefix: ''
+        output-file: 'CHANGELOG.md'
+        git-user-email: "contact@bigfootds.com"
+        git-user-name: "BigfootDS"
+
+    - name: Set up dependencies
+      run: |
+        npm install
+
+    - name: Build the project
+      run: |
+        npm run build
+
+    - name: Bundle changelog into build
+      run: |
+        cp CHANGELOG.md ./dist/CHANGELOG.md
+
+    - name: ZIP the build up to release it
+      run: |
+        zip -r example-template.zip ./dist/
+
+    - name: Create repo release
+      if: ${{ steps.bumper-step.outputs.skipped == 'false' }}
+      uses: softprops/action-gh-release@v2.2.2
+      with: 
+        body: ${{ steps.bumper-step.outputs.clean_changelog }}
+        tag_name: ${{ steps.bumper-step.outputs.tag }}
+        draft: false
+        prerelease: false
+        files: |
+          example-template.zip
