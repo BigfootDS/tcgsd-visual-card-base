@@ -1,3 +1,7 @@
+## [1.1.4](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.3...1.1.4) (2025-05-25)
+
+
+
 ## [1.1.3](https://github.com/BigfootDS/tcgsd-visual-card-base/compare/1.1.2...1.1.3) (2025-05-24)
 
 
