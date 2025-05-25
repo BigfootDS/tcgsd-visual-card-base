@@ -48,18 +48,19 @@ The `metadata.json` file should have data as follows:
 ```typescript
 export interface VisualTemplateMetadata {
     internalName: string;
+    author: Author;
     version?: string;
     website?: string;
     repository?: string;
-    author?: Author;
     name?: LocalisedName[];
     game?: Game;
 }
 
 export interface Author {
-    name:  string;
+    email: string;
+    name?:  LocalisedName[];
     url?:   string;
-    email?: string;
+    phone?: string;
 }
 
 export interface Game {
@@ -72,7 +73,7 @@ export interface LocalisedName {
 }
 ```
 
-From the root-level metadata, only the `internalName` is required. Other properties are optional, however some optional properties are objects and those objects do have required properties. For example, if you put in a `name` in your metadata, then the `name` value must be an array of objects where ALL objects must contain a `language` and `content` property with string values. 
+From the root-level metadata, only the `internalName` and `author` are required (and the `email` property of an `author` is required). Other properties are optional, however some optional properties are objects and those objects do have required properties. For example, if you put in a `name` in your metadata, then the `name` value must be an array of objects where ALL objects must contain a `language` and `content` property with string values. 
 
 An example of a full `metadata.json` file is here:
 
